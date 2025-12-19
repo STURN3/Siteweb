@@ -8,164 +8,108 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .product-card img { transition: transform 0.5s ease; }
+        .product-card:hover img { transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-white text-gray-900">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="text-2xl font-bold tracking-tighter text-black uppercase">UTOPIA</div>
-                <div class="hidden md:flex space-x-8 font-medium">
-                    <a href="#shop" class="hover:text-green-700 transition">Collection</a>
-                    <a href="#about" class="hover:text-green-700 transition">À Propos</a>
-                    <a href="#values" class="hover:text-green-700 transition">Valeurs</a>
-                </div>
-                <div class="flex items-center space-x-5">
-                    <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-                    <div class="relative cursor-pointer">
-                        <i class="fa-solid fa-bag-shopping text-xl"></i>
-                        <span class="absolute -top-2 -right-2 bg-green-600 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
-                    </div>
-                </div>
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter uppercase italic">UTOPIA</div>
+            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
+                <a href="#shop" class="hover:text-green-600 transition">Boutique</a>
+                <a href="#about" class="hover:text-green-600 transition">L'Esprit</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="fa-solid fa-bag-shopping text-xl"></i>
             </div>
         </div>
     </nav>
 
-    <header class="relative h-[80vh] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-60">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80" alt="Training" class="w-full h-full object-cover">
-        </div>
-        <div class="relative text-center px-4">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">ESTHÉTIQUE & ÉQUITABLE</h1>
-            <p class="text-lg md:text-xl mb-8 font-light max-w-2xl mx-auto">La performance sans compromis éthique. Découvrez la nouvelle collection Utopia.</p>
-            <a href="#shop" class="bg-white text-black px-10 py-4 font-bold hover:bg-green-600 hover:text-white transition duration-300">DÉCOUVRIR</a>
+    <header class="relative h-[70vh] flex items-center justify-center overflow-hidden bg-black">
+        <img src="https://storage.googleapis.com/static.fast-poker.com/files/519EFA60-03C2-4BC7-99D5-C757DAB29287.jpeg" 
+             class="absolute inset-0 w-full h-full object-cover opacity-70" alt="Utopia Team">
+        <div class="relative text-center text-white px-4">
+            <h1 class="text-6xl font-black italic mb-2 tracking-tighter">UTOPIA</h1>
+            <p class="text-xl font-light tracking-[0.2em] uppercase">Esthétique & Équitable</p>
         </div>
     </header>
 
-    <section id="shop" class="py-20 max-w-7xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-                <h2 class="text-3xl font-bold uppercase tracking-widest">La Collection</h2>
-                <div class="h-1 w-20 bg-green-600 mt-2"></div>
+    <section id="shop" class="py-20 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 uppercase italic border-l-4 border-green-600 pl-4">La Collection</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            
+            <div class="product-card group">
+                <div class="bg-[#F3F3F3] aspect-square overflow-hidden mb-4 rounded-sm relative">
+                    <img src="https://storage.googleapis.com/static.fast-poker.com/files/3F9EE91C-3418-4135-8EBB-0F6ABA80BBF7.jpeg" 
+                         class="w-full h-full object-contain p-4" alt="T-shirt Court">
+                </div>
+                <h3 class="font-bold uppercase tracking-tight">T-shirt Court "Utopia" - Forest Green</h3>
+                <p class="text-green-700 font-bold text-lg">18,00€</p>
             </div>
-            <div class="flex space-x-4 mt-6 md:mt-0 text-sm font-semibold uppercase">
-                <span class="text-green-600 border-b-2 border-green-600 cursor-pointer">Tous</span>
-                <span class="text-gray-400 hover:text-black cursor-pointer transition">T-shirts Courts</span>
-                <span class="text-gray-400 hover:text-black cursor-pointer transition">Manches Longues</span>
+
+            <div class="product-card group">
+                <div class="bg-[#F3F3F3] aspect-square overflow-hidden mb-4 rounded-sm">
+                    <img src="https://storage.googleapis.com/static.fast-poker.com/files/3F9EE91C-3418-4135-8EBB-0F6ABA80BBF7.jpeg" 
+                         class="w-full h-full object-contain p-4" style="filter: brightness(0.8);" alt="T-shirt Court Black">
+                </div>
+                <h3 class="font-bold uppercase tracking-tight">T-shirt Court Essentiel - Onyx Black</h3>
+                <p class="text-gray-600 font-bold text-lg text-decoration-line: line-through">15,00€</p>
+                <p class="text-black font-bold text-lg">12,00€ <span class="text-xs text-red-500 font-normal italic">- Promo</span></p>
             </div>
+
+            <div class="product-card group">
+                <div class="bg-[#F3F3F3] aspect-square overflow-hidden mb-4 rounded-sm">
+                    <img src="https://storage.googleapis.com/static.fast-poker.com/files/3F9EE91C-3418-4135-8EBB-0F6ABA80BBF7.jpeg" 
+                         class="w-full h-full object-contain p-4" alt="T-shirt Long">
+                </div>
+                <h3 class="font-bold uppercase tracking-tight">Manches Longues - Blue Navy</h3>
+                <p class="text-gray-900 font-bold text-lg">14,00€</p>
+            </div>
+
+            <div class="product-card group">
+                <div class="bg-[#F3F3F3] aspect-square overflow-hidden mb-4 rounded-sm">
+                    <img src="https://storage.googleapis.com/static.fast-poker.com/files/3F9EE91C-3418-4135-8EBB-0F6ABA80BBF7.jpeg" 
+                         class="w-full h-full object-contain p-4" alt="T-shirt Long Heather">
+                </div>
+                <h3 class="font-bold uppercase tracking-tight">Manches Longues - Heather Grey</h3>
+                <p class="text-gray-900 font-bold text-lg">20,00€</p>
+            </div>
+
+            <div class="product-card group border-2 border-green-500 p-2">
+                <div class="bg-[#F3F3F3] aspect-square overflow-hidden mb-4 rounded-sm relative">
+                    <span class="absolute top-2 right-2 bg-green-500 text-white text-[10px] px-2 py-1 font-bold"> PREMIUM </span>
+                    <img src="https://storage.googleapis.com/static.fast-poker.com/files/3F9EE91C-3418-4135-8EBB-0F6ABA80BBF7.jpeg" 
+                         class="w-full h-full object-contain p-4" alt="T-shirt Long Pro">
+                </div>
+                <h3 class="font-bold uppercase tracking-tight">T-shirt Long "Utopia Pro" Edition</h3>
+                <p class="text-green-700 font-bold text-lg">62,00€</p>
+            </div>
+
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div class="group cursor-pointer">
-                <div class="bg-gray-100 aspect-[3/4] mb-4 overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-black text-white px-3 py-1 text-xs font-bold uppercase">Base</div>
-                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <button class="absolute bottom-0 w-full bg-black text-white py-4 opacity-0 group-hover:opacity-100 transition-opacity">AJOUTER AU PANIER</button>
-                </div>
-                <h3 class="font-bold">T-shirt Court Performance</h3>
-                <p class="text-gray-500 text-sm italic">Équitable & Respirant</p>
-                <p class="mt-1 font-bold">12,00€</p>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="bg-gray-100 aspect-[3/4] mb-4 overflow-hidden relative border-2 border-green-100">
-                    <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 text-xs font-bold uppercase">Premium</div>
-                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <button class="absolute bottom-0 w-full bg-black text-white py-4 opacity-0 group-hover:opacity-100 transition-opacity">AJOUTER AU PANIER</button>
-                </div>
-                <h3 class="font-bold">T-shirt Court "Utopia Green"</h3>
-                <p class="text-gray-500 text-sm italic">Équitable & Durable</p>
-                <p class="mt-1 font-bold text-green-700">18,00€</p>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="bg-gray-100 aspect-[3/4] mb-4 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <button class="absolute bottom-0 w-full bg-black text-white py-4 opacity-0 group-hover:opacity-100 transition-opacity">AJOUTER AU PANIER</button>
-                </div>
-                <h3 class="font-bold">T-shirt Long Compression</h3>
-                <p class="text-gray-500 text-sm italic">Soutien Musculaire</p>
-                <p class="mt-1 font-bold text-gray-900">14,00€</p>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="bg-gray-100 aspect-[3/4] mb-4 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1511130558045-3882260f7797?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <button class="absolute bottom-0 w-full bg-black text-white py-4 opacity-0 group-hover:opacity-100 transition-opacity">AJOUTER AU PANIER</button>
-                </div>
-                <h3 class="font-bold">T-shirt Long "Core" Anthracite</h3>
-                <p class="text-gray-500 text-sm italic">Confort Absolu</p>
-                <p class="mt-1 font-bold text-gray-900">20,00€</p>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="bg-gray-100 aspect-[3/4] mb-4 overflow-hidden relative border-2 border-yellow-500">
-                    <div class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 text-xs font-bold uppercase">Édition Limitée</div>
-                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <button class="absolute bottom-0 w-full bg-black text-white py-4 opacity-0 group-hover:opacity-100 transition-opacity">AJOUTER AU PANIER</button>
-                </div>
-                <h3 class="font-bold">T-shirt Long "Utopia Pro"</h3>
-                <p class="text-gray-500 text-sm italic">Technologie Fibre Organique</p>
-                <p class="mt-1 font-bold text-yellow-600">62,00€</p>
+    <section id="about" class="bg-gray-50 py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <img src="https://storage.googleapis.com/static.fast-poker.com/files/BC8B4456-806A-4692-9E8E-D816ADFA74EA.jpeg" 
+                 class="w-32 mx-auto mb-8" alt="Utopia Logo">
+            <h2 class="text-4xl font-black italic mb-6 uppercase">Équitable & Esthétique</h2>
+            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                Chez <span class="font-bold tracking-tighter uppercase">Utopia</span>, nous croyons qu'un vêtement de sport doit être aussi performant pour ton entraînement que pour ton éthique. Tous nos produits sont conçus pour offrir une **esthétique pure** et un confort durable, tout en garantissant une chaîne de production **équitable**.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="flex items-center space-x-2 font-bold uppercase text-xs tracking-widest"><i class="fa-solid fa-check text-green-600"></i> <span>Matières Durables</span></div>
+                <div class="flex items-center space-x-2 font-bold uppercase text-xs tracking-widest"><i class="fa-solid fa-check text-green-600"></i> <span>Prix Justes</span></div>
+                <div class="flex items-center space-x-2 font-bold uppercase text-xs tracking-widest"><i class="fa-solid fa-check text-green-600"></i> <span>Design Premium</span></div>
             </div>
         </div>
     </section>
 
-    <section id="values" class="bg-gray-50 py-20">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl font-bold mb-6 italic uppercase">Nos Valeurs</h2>
-                <div class="space-y-8">
-                    <div class="flex gap-4">
-                        <div class="bg-green-600 text-white p-3 h-12 w-12 flex items-center justify-center rounded-full">
-                            <i class="fa-solid fa-leaf"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-xl uppercase">Équitable</h4>
-                            <p class="text-gray-600">Nous garantissons des conditions de travail dignes et une rémunération juste sur toute notre chaîne de production.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="bg-black text-white p-3 h-12 w-12 flex items-center justify-center rounded-full">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-xl uppercase">Esthétique</h4>
-                            <p class="text-gray-600">Parce que le style ne doit jamais être sacrifié pour la fonction. Un design pur qui s'adapte à la ville comme à la salle.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?auto=format&fit=crop&q=80" alt="Valeurs">
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-20 max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-8 uppercase tracking-tighter italic">À Propos d'Utopia</h2>
-        <p class="text-gray-700 leading-relaxed text-lg mb-6">
-            Utopia est née de la volonté de créer une alternative dans l'industrie du sportwear. Nous pensons que chaque mouvement, chaque répétition, chaque goutte de sueur doit être portée par un vêtement qui respecte l'humain et l'environnement.
-        </p>
-        <p class="text-gray-700 leading-relaxed text-lg">
-            Nos tissus sont sélectionnés pour leur durabilité et leur technicité, tout en conservant une ligne épurée qui définit l'esthétique Utopia.
-        </p>
-    </section>
-
-    <footer class="bg-black text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-8 md:mb-0">
-                <div class="text-3xl font-bold tracking-tighter uppercase mb-2">UTOPIA</div>
-                <p class="text-gray-500">© 2024 Utopia Sportswear. Tous droits réservés.</p>
-            </div>
-            <div class="flex space-x-6 text-2xl">
-                <i class="fa-brands fa-instagram hover:text-green-500 cursor-pointer"></i>
-                <i class="fa-brands fa-tiktok hover:text-green-500 cursor-pointer"></i>
-                <i class="fa-brands fa-facebook hover:text-green-500 cursor-pointer"></i>
-            </div>
-        </div>
+    <footer class="bg-black text-white py-10 px-6 text-center text-xs uppercase tracking-widest">
+        <p>© 2024 UTOPIA SPORTSWEAR - ÉQUITABLE PAR NATURE</p>
     </footer>
 
 </body>
